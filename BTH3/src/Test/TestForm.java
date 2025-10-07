@@ -14,7 +14,7 @@ import Initialization.Init;
 
 public class TestForm extends Init {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		SetUp("edge");
 		driver.get("https://www.techlistic.com/p/selenium-practice-form.html");
 		driver.manage().window().maximize();
@@ -47,7 +47,11 @@ public class TestForm extends Init {
 		CommandsSelect.selectByVisibleText("Browser Commands");
 		CommandsSelect.selectByVisibleText("WebElement Commands");
 		
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("submit"))).click();
+		
 		System.out.println("Chạy thành công");
+		
+		Teardown();
 	}
 
 }
