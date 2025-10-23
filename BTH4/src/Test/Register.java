@@ -1,14 +1,12 @@
 package Test;
 
-import java.awt.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import Initialization.Init;
 
-public class Login extends Init{
+public class Register extends Init{
 
 	public static void main(String[] args) throws InterruptedException {
 		SetUp("edge");
@@ -53,7 +51,7 @@ public class Login extends Init{
         
         WebElement selectDays = driver.findElement(By.xpath("//*[@id='days']"));
         Select select = new Select(selectDays);
-        select.selectByIndex(1);
+        select.selectByValue("1");
 //		Teardown();
 //		
 //		driver.quit();

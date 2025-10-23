@@ -62,7 +62,7 @@ public class TestLogin extends Init {
 		else
 			System.out.println("Ko hien thi thong bao loi");
 		if (errorMessagePassword.getText().contains("Your password is invalid!"))
-			System.out.println("Hien thi dung message 'Your username is invalid!'");
+			System.out.println("Hien thi dung message 'Your password is invalid!'");
 		else
 			System.out.println(errorMessagePassword.getText());
 		Teardown();
