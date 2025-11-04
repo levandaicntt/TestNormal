@@ -11,7 +11,7 @@ import Initialization.*;
 
 public class MyAccount extends Init {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		SetUp("edge");
 		driver.get("https://practice.bpbonline.com/");
 		
@@ -29,6 +29,8 @@ public class MyAccount extends Init {
 		WebElement btnContinue = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Continue")));
 		btnContinue.click();
 		System.out.println("Chạy thành công");
+		
+		Teardown();
 	}
 
 }
