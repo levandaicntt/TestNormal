@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Dang nhap that bai]]>
+    </line>
+    <line>
+      <![CDATA[Dang nhap that bai]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-11-27T16:29:09 ICT" name="Suite" finished-at="2025-11-27T16:30:40 ICT" duration-ms="91136">
+    <groups>
+    </groups>
+    <test started-at="2025-11-27T16:29:09 ICT" name="Test on edge" finished-at="2025-11-27T16:29:39 ICT" duration-ms="29504">
+      <class name="TestNG.TestLogin">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestNG.TestLogin@7586beff]" started-at="2025-11-27T16:29:09 ICT" name="beforeMethod" finished-at="2025-11-27T16:29:11 ICT" duration-ms="1219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validLogin()[pri:0, instance:TestNG.TestLogin@7586beff]" started-at="2025-11-27T16:29:11 ICT" name="validLogin" finished-at="2025-11-27T16:29:37 ICT" duration-ms="26126" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Dang nhap that bai]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.TestLogin@7586beff]" started-at="2025-11-27T16:29:37 ICT" name="afterMethod" finished-at="2025-11-27T16:29:39 ICT" duration-ms="2135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestNG.TestLogin -->
+    </test> <!-- Test on edge -->
+    <test started-at="2025-11-27T16:29:39 ICT" name="Test on chrome" finished-at="2025-11-27T16:30:40 ICT" duration-ms="61596">
+      <class name="TestNG.TestLogin">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:TestNG.TestLogin@58a9760d]" started-at="2025-11-27T16:29:39 ICT" name="beforeMethod" finished-at="2025-11-27T16:29:42 ICT" duration-ms="3465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validLogin()[pri:0, instance:TestNG.TestLogin@58a9760d]" started-at="2025-11-27T16:29:42 ICT" name="validLogin" finished-at="2025-11-27T16:30:38 ICT" duration-ms="55977" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Dang nhap that bai]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.TestLogin@58a9760d]" started-at="2025-11-27T16:30:38 ICT" name="afterMethod" finished-at="2025-11-27T16:30:40 ICT" duration-ms="2151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestNG.TestLogin -->
+    </test> <!-- Test on chrome -->
+  </suite> <!-- Suite -->
+</testng-results>

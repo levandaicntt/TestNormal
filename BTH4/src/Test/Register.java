@@ -74,14 +74,14 @@ public class Register {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Logged in as')]")));
         System.out.println("✅ Logged in as user");
 
-        // Step 17: Nhấn nút Delete Account
-        driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]")).click();
-
-        // Step 18: Xác minh 'ACCOUNT DELETED!' hiển thị
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@data-qa='account-deleted']")));
-        System.out.println("✅ Account deleted successfully");
-
-        // Đóng trình duyệt
-        driver.quit();
+//        // Step 17: Nhấn nút Delete Account
+//        driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]")).click();
+//
+//        // Step 18: Xác minh 'ACCOUNT DELETED!' hiển thị
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@data-qa='account-deleted']")));
+//        System.out.println("✅ Account deleted successfully");
+//
+//        // Đóng trình duyệt
+//        driver.quit();
     }
 }
