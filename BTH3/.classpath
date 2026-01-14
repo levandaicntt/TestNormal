@@ -7,82 +7,44 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/auto-service-annotations-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/auto-service-annotations-1.1.1-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/byte-buddy-1.17.6.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/byte-buddy-1.17.6-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-exec-1.5.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-exec-1.5.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-io-2.17.0.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-io-2.17.0-javadoc.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-io-2.17.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-io-2.17.0-tests.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/commons-io-2.17.0-test-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/error_prone_annotations-2.38.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/error_prone_annotations-2.38.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/failureaccess-1.0.3.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/failureaccess-1.0.3-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/guava-33.4.8-jre.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/guava-33.4.8-jre-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/j2objc-annotations-3.0.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/j2objc-annotations-3.0.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/jspecify-1.0.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/jspecify-1.0.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-api-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-api-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-common-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-common-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-context-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-context-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-exporter-logging-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-exporter-logging-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-common-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-common-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-extension-autoconfigure-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-extension-autoconfigure-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-extension-autoconfigure-spi-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-logs-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-logs-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-metrics-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-metrics-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-trace-1.53.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/opentelemetry-sdk-trace-1.53.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-api-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-api-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-chrome-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-chrome-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-chromium-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-chromium-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-devtools-v137-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-devtools-v137-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-devtools-v138-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-devtools-v138-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-devtools-v139-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-devtools-v139-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-edge-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-edge-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-firefox-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-firefox-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-http-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-http-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-ie-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-ie-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-java-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-java-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-json-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-json-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-manager-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-manager-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-os-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-os-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-remote-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-remote-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-safari-driver-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-safari-driver-4.35.0-sources.jar"/>
 	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-support-4.35.0.jar"/>
-	<classpathentry kind="lib" path="D:/SeleniumSupportLibrary/AllInOne/selenium-support-4.35.0-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

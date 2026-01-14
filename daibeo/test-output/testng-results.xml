@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Browser = edge]]>
+    </line>
+    <line>
+      <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[START TEST CASE: Login Test]]>
+    </line>
+    <line>
+      <![CDATA[Test data:]]>
+    </line>
+    <line>
+      <![CDATA[Username = Admin]]>
+    </line>
+    <line>
+      <![CDATA[Password = admin123]]>
+    </line>
+    <line>
+      <![CDATA[Expected = success]]>
+    </line>
+    <line>
+      <![CDATA[RESULT: PASS – Login success]]>
+    </line>
+    <line>
+      <![CDATA[END TEST CASE]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[Browser = edge]]>
+    </line>
+    <line>
+      <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[START TEST CASE: Login Test]]>
+    </line>
+    <line>
+      <![CDATA[Test data:]]>
+    </line>
+    <line>
+      <![CDATA[Username = Admin]]>
+    </line>
+    <line>
+      <![CDATA[Password = wrongpass]]>
+    </line>
+    <line>
+      <![CDATA[Expected = failure]]>
+    </line>
+    <line>
+      <![CDATA[RESULT: PASS – Invalid credentials displayed]]>
+    </line>
+    <line>
+      <![CDATA[END TEST CASE]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[Browser = edge]]>
+    </line>
+    <line>
+      <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[START TEST CASE: Login Test]]>
+    </line>
+    <line>
+      <![CDATA[Test data:]]>
+    </line>
+    <line>
+      <![CDATA[Username = Admin]]>
+    </line>
+    <line>
+      <![CDATA[Password = admin123]]>
+    </line>
+    <line>
+      <![CDATA[Expected = success]]>
+    </line>
+    <line>
+      <![CDATA[END TEST CASE]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[Browser = edge]]>
+    </line>
+    <line>
+      <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[START TEST CASE: Login Test]]>
+    </line>
+    <line>
+      <![CDATA[Test data:]]>
+    </line>
+    <line>
+      <![CDATA[Username = Admin]]>
+    </line>
+    <line>
+      <![CDATA[Password = wrongpass]]>
+    </line>
+    <line>
+      <![CDATA[Expected = failure]]>
+    </line>
+    <line>
+      <![CDATA[RESULT: PASS – Invalid credentials displayed]]>
+    </line>
+    <line>
+      <![CDATA[END TEST CASE]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[START TEST CASE: Reset Password Test]]>
+    </line>
+    <line>
+      <![CDATA[STEP 1: Click 'Forgot your password?']]>
+    </line>
+    <line>
+      <![CDATA[STEP 2: Input username = Admin]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3: Click Reset Password button]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4: Verify reset password success message]]>
+    </line>
+    <line>
+      <![CDATA[✅ PASS – Reset password success message displayed]]>
+    </line>
+    <line>
+      <![CDATA[STEP 5: Back to Login page]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6: Login with valid credentials]]>
+    </line>
+    <line>
+      <![CDATA[✅ PASS – Login successful after reset password]]>
+    </line>
+    <line>
+      <![CDATA[END TEST CASE]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+    <line>
+      <![CDATA[START TEST CASE: PIM Add Employee]]>
+    </line>
+    <line>
+      <![CDATA[STEP 1: Login]]>
+    </line>
+    <line>
+      <![CDATA[✅ Login success]]>
+    </line>
+    <line>
+      <![CDATA[STEP 2: Open PIM module]]>
+    </line>
+    <line>
+      <![CDATA[STEP 3: Click Add Employee]]>
+    </line>
+    <line>
+      <![CDATA[END TEST CASE]]>
+    </line>
+    <line>
+      <![CDATA[====================================]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-01-13T20:58:57 ICT" name="Login Suite" finished-at="2026-01-13T21:02:52 ICT" duration-ms="234736">
+    <groups>
+    </groups>
+    <test started-at="2026-01-13T20:58:57 ICT" name="CSV Login Test" finished-at="2026-01-13T20:59:41 ICT" duration-ms="44172">
+      <class name="LoginLogoutTest.LoginLogoutCSV">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutCSV@6f4a47c7]" started-at="2026-01-13T20:58:57 ICT" name="beforeMethod" finished-at="2026-01-13T20:59:07 ICT" duration-ms="9285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser = edge]]>
+            </line>
+            <line>
+              <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+            <line>
+              <![CDATA[START TEST CASE: Login Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutCSV@6f4a47c7]" started-at="2026-01-13T20:59:07 ICT" name="loginTest" data-provider="dp" finished-at="2026-01-13T20:59:20 ICT" duration-ms="13548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test data:]]>
+            </line>
+            <line>
+              <![CDATA[Username = Admin]]>
+            </line>
+            <line>
+              <![CDATA[Password = admin123]]>
+            </line>
+            <line>
+              <![CDATA[Expected = success]]>
+            </line>
+            <line>
+              <![CDATA[RESULT: PASS – Login success]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:LoginLogoutTest.LoginLogoutCSV@6f4a47c7]" started-at="2026-01-13T20:59:20 ICT" name="afterMethod" finished-at="2026-01-13T20:59:20 ICT" duration-ms="135" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[END TEST CASE]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutCSV@6f4a47c7]" started-at="2026-01-13T20:59:20 ICT" name="beforeMethod" finished-at="2026-01-13T20:59:28 ICT" duration-ms="8208" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser = edge]]>
+            </line>
+            <line>
+              <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+            <line>
+              <![CDATA[START TEST CASE: Login Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutCSV@6f4a47c7]" started-at="2026-01-13T20:59:28 ICT" name="loginTest" data-provider="dp" finished-at="2026-01-13T20:59:41 ICT" duration-ms="12823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[failure]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test data:]]>
+            </line>
+            <line>
+              <![CDATA[Username = Admin]]>
+            </line>
+            <line>
+              <![CDATA[Password = wrongpass]]>
+            </line>
+            <line>
+              <![CDATA[Expected = failure]]>
+            </line>
+            <line>
+              <![CDATA[RESULT: PASS – Invalid credentials displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:LoginLogoutTest.LoginLogoutCSV@6f4a47c7]" started-at="2026-01-13T20:59:41 ICT" name="afterMethod" finished-at="2026-01-13T20:59:41 ICT" duration-ms="138" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[END TEST CASE]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- LoginLogoutTest.LoginLogoutCSV -->
+    </test> <!-- CSV Login Test -->
+    <test started-at="2026-01-13T20:59:41 ICT" name="XLSX Login Test" finished-at="2026-01-13T21:00:33 ICT" duration-ms="52034">
+      <class name="LoginLogoutTest.LoginLogoutXLSX">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutXLSX@7748410a]" started-at="2026-01-13T20:59:42 ICT" name="beforeMethod" finished-at="2026-01-13T20:59:56 ICT" duration-ms="14374" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser = edge]]>
+            </line>
+            <line>
+              <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+            <line>
+              <![CDATA[START TEST CASE: Login Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutXLSX@7748410a]" started-at="2026-01-13T20:59:56 ICT" name="loginTest" data-provider="dp" finished-at="2026-01-13T21:00:14 ICT" duration-ms="18016" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //h6[text()='Dashboard'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.139, fedcm:accounts: true, goog:processID: 11428, ms:edgeOptions: {debuggerAddress: localhost:61478}, msedge: {msedgedriverVersion: 143.0.3650.139 (30ed6d0ef65..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61478/devtoo..., se:cdpVersion: 143.0.3650.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78c79ed6af8514c0e0b72d8099a36951]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h6[text()='Dashboard'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.139, fedcm:accounts: true, goog:processID: 11428, ms:edgeOptions: {debuggerAddress: localhost:61478}, msedge: {msedgedriverVersion: 143.0.3650.139 (30ed6d0ef65..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61478/devtoo..., se:cdpVersion: 143.0.3650.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78c79ed6af8514c0e0b72d8099a36951
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at LoginLogoutTest.LoginLogoutXLSX.loginTest(LoginLogoutXLSX.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test data:]]>
+            </line>
+            <line>
+              <![CDATA[Username = Admin]]>
+            </line>
+            <line>
+              <![CDATA[Password = admin123]]>
+            </line>
+            <line>
+              <![CDATA[Expected = success]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:LoginLogoutTest.LoginLogoutXLSX@7748410a]" started-at="2026-01-13T21:00:14 ICT" name="afterMethod" finished-at="2026-01-13T21:00:14 ICT" duration-ms="117" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[END TEST CASE]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutXLSX@7748410a]" started-at="2026-01-13T21:00:14 ICT" name="beforeMethod" finished-at="2026-01-13T21:00:29 ICT" duration-ms="14743" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser = edge]]>
+            </line>
+            <line>
+              <![CDATA[URL = https://opensource-demo.orangehrmlive.com]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+            <line>
+              <![CDATA[START TEST CASE: Login Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.LoginLogoutXLSX@7748410a]" started-at="2026-01-13T21:00:29 ICT" name="loginTest" data-provider="dp" finished-at="2026-01-13T21:00:33 ICT" duration-ms="4290" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[failure]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Test data:]]>
+            </line>
+            <line>
+              <![CDATA[Username = Admin]]>
+            </line>
+            <line>
+              <![CDATA[Password = wrongpass]]>
+            </line>
+            <line>
+              <![CDATA[Expected = failure]]>
+            </line>
+            <line>
+              <![CDATA[RESULT: PASS – Invalid credentials displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:LoginLogoutTest.LoginLogoutXLSX@7748410a]" started-at="2026-01-13T21:00:33 ICT" name="afterMethod" finished-at="2026-01-13T21:00:33 ICT" duration-ms="88" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[END TEST CASE]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- LoginLogoutTest.LoginLogoutXLSX -->
+    </test> <!-- XLSX Login Test -->
+    <test started-at="2026-01-13T21:00:33 ICT" name="Reset Password Test" finished-at="2026-01-13T21:02:08 ICT" duration-ms="94481">
+      <class name="LoginLogoutTest.ResetPasswordTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String)[pri:0, instance:LoginLogoutTest.ResetPasswordTest@60015ef5]" started-at="2026-01-13T21:00:34 ICT" name="beforeMethod" finished-at="2026-01-13T21:00:44 ICT" duration-ms="10291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+            <line>
+              <![CDATA[START TEST CASE: Reset Password Test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="resetPasswordAndLoginSuccess()[pri:0, instance:LoginLogoutTest.ResetPasswordTest@60015ef5]" started-at="2026-01-13T21:00:44 ICT" name="resetPasswordAndLoginSuccess" finished-at="2026-01-13T21:02:08 ICT" duration-ms="84093" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[STEP 1: Click 'Forgot your password?']]>
+            </line>
+            <line>
+              <![CDATA[STEP 2: Input username = Admin]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3: Click Reset Password button]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4: Verify reset password success message]]>
+            </line>
+            <line>
+              <![CDATA[✅ PASS – Reset password success message displayed]]>
+            </line>
+            <line>
+              <![CDATA[STEP 5: Back to Login page]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6: Login with valid credentials]]>
+            </line>
+            <line>
+              <![CDATA[✅ PASS – Login successful after reset password]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- resetPasswordAndLoginSuccess -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:LoginLogoutTest.ResetPasswordTest@60015ef5]" started-at="2026-01-13T21:02:08 ICT" name="afterMethod" finished-at="2026-01-13T21:02:08 ICT" duration-ms="93" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[END TEST CASE]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- LoginLogoutTest.ResetPasswordTest -->
+    </test> <!-- Reset Password Test -->
+    <test started-at="2026-01-13T21:02:08 ICT" name="PIM Test" finished-at="2026-01-13T21:02:52 ICT" duration-ms="44014">
+      <class name="PIM.PIMTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String)[pri:0, instance:PIM.PIMTest@50caa560]" started-at="2026-01-13T21:02:08 ICT" name="beforeMethod" finished-at="2026-01-13T21:02:19 ICT" duration-ms="10709" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://opensource-demo.orangehrmlive.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+            <line>
+              <![CDATA[START TEST CASE: PIM Add Employee]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="addEmployeeAndAttachmentSuccess()[pri:0, instance:PIM.PIMTest@50caa560]" started-at="2026-01-13T21:02:19 ICT" name="addEmployeeAndAttachmentSuccess" finished-at="2026-01-13T21:02:52 ICT" duration-ms="33205" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='orangehrm-header-container']//button[.//text()='Add'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.139, fedcm:accounts: true, goog:processID: 25124, ms:edgeOptions: {debuggerAddress: localhost:63839}, msedge: {msedgedriverVersion: 143.0.3650.139 (30ed6d0ef65..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63839/devtoo..., se:cdpVersion: 143.0.3650.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aed3362bfba31f0017661cf535135356]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='orangehrm-header-container']//button[.//text()='Add'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.139, fedcm:accounts: true, goog:processID: 25124, ms:edgeOptions: {debuggerAddress: localhost:63839}, msedge: {msedgedriverVersion: 143.0.3650.139 (30ed6d0ef65..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63839/devtoo..., se:cdpVersion: 143.0.3650.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aed3362bfba31f0017661cf535135356
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at PIM.PIMTest.addEmployeeAndAttachmentSuccess(PIMTest.java:66)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[STEP 1: Login]]>
+            </line>
+            <line>
+              <![CDATA[✅ Login success]]>
+            </line>
+            <line>
+              <![CDATA[STEP 2: Open PIM module]]>
+            </line>
+            <line>
+              <![CDATA[STEP 3: Click Add Employee]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addEmployeeAndAttachmentSuccess -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:PIM.PIMTest@50caa560]" started-at="2026-01-13T21:02:52 ICT" name="afterMethod" finished-at="2026-01-13T21:02:52 ICT" duration-ms="96" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[END TEST CASE]]>
+            </line>
+            <line>
+              <![CDATA[====================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- PIM.PIMTest -->
+    </test> <!-- PIM Test -->
+  </suite> <!-- Login Suite -->
+</testng-results>
