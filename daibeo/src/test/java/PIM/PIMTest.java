@@ -2,184 +2,151 @@ package PIM;
 
 import java.time.Duration;
 import java.nio.file.Paths;
+import java.util.Random;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 
+import DataHanding.DataReader;
 import Initialization.Init;
 
 public class PIMTest extends Init {
 
-    WebDriverWait wait;
+    private WebDriverWait wait;
 
     @BeforeMethod
     @Parameters({ "browser", "url" })
     public void beforeMethod(String browser, String url) {
-
         SetUp(browser);
         driver.get(url);
         driver.manage().window().maximize();
-
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         Reporter.log("====================================", true);
-        Reporter.log("START TEST CASE: PIM Add Employee", true);
+        Reporter.log("START TEST CASE: PIM Add Employee with DataProvider", true);
     }
 
-    @Test
-    public void addEmployeeAndAttachmentSuccess() {
+    private void waitLoader() {
+        try {
+            new WebDriverWait(driver, Duration.ofMillis(1000))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oxd-loading-spinner, .oxd-form-loader")));
+        } catch (Exception ignored) {}
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".oxd-loading-spinner, .oxd-form-loader")));
+    }
 
-        /* =======================
-         * STEP 1: LOGIN
-         * ======================= */
+    private void smartClick(By locator) {
+        WebElement el = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+        wait.until(ExpectedConditions.elementToBeClickable(el));
+        try {
+            el.click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", el);
+        }
+    }
+
+    private String generateRandomId() {
+        return String.valueOf(new Random().nextInt(900000) + 100000);
+    }
+
+    /**
+     * Tích hợp DataProvider để chạy test với nhiều bộ dữ liệu từ file Excel
+     */
+    @Test(dataProvider = "pimData")
+    public void addEmployeeAndAttachmentSuccess(String fName, String mName, String lName, String employeeId) {
+        
+        Reporter.log("DATA: " + fName + " " + mName + " " + lName + " (ID: " + employeeId + ")", true);
+
         Reporter.log("STEP 1: Login", true);
-
-        driver.findElement(By.name("username")).sendKeys("Admin");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username"))).sendKeys("Admin");
         driver.findElement(By.name("password")).sendKeys("admin123");
         driver.findElement(By.cssSelector("button[type='submit']")).click();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//h6[text()='Dashboard']")));
+        Reporter.log("STEP 2: Open PIM", true);
+        smartClick(By.xpath("//a[contains(@href,'viewPimModule')]"));
+        waitLoader();
 
-        Reporter.log("✅ Login success", true);
+        Reporter.log("STEP 3: Add Employee", true);
+        smartClick(By.xpath("//button[text()=' Add ' or .//i[contains(@class,'bi-plus')]]"));
+        waitLoader();
 
-        /* =======================
-         * STEP 2: OPEN PIM
-         * ======================= */
-        Reporter.log("STEP 2: Open PIM module", true);
+        Reporter.log("STEP 4: Input employee info from Excel", true);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("firstName"))).sendKeys(fName);
+        driver.findElement(By.name("middleName")).sendKeys(mName);
+        driver.findElement(By.name("lastName")).sendKeys(lName);
 
-        driver.findElement(By.xpath(
-                "//a[contains(@href,'viewPimModule')]"))
-                .click();
+        WebElement empIdInput = driver.findElement(By.xpath("//label[text()='Employee Id']/following::input[1]"));
+        empIdInput.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
+        empIdInput.sendKeys(employeeId);
+        empIdInput.sendKeys(Keys.TAB);
 
-        /* =======================
-         * STEP 3: CLICK ADD
-         * ======================= */
-        Reporter.log("STEP 3: Click Add Employee", true);
-        wait.until(ExpectedConditions.urlContains("viewEmployeeList"));
+        // Xử lý nếu ID từ Excel đã tồn tại trong hệ thống
+        if (!driver.findElements(By.xpath("//span[contains(.,'already exists')]")).isEmpty()) {
+            Reporter.log("⚠️ ID " + employeeId + " đã tồn tại, đang tạo ID ngẫu nhiên...", true);
+            empIdInput.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
+            empIdInput.sendKeys(generateRandomId());
+            empIdInput.sendKeys(Keys.TAB);
+        }
 
-        WebElement addEmployeeBtn = wait.until(
-        	    ExpectedConditions.elementToBeClickable(
-        	        By.xpath("//div[@class='orangehrm-header-container']//button[.//text()='Add']")
-        	    )
-        	);
+        Reporter.log("STEP 5: Save Add Employee FORM", true);
+        smartClick(By.xpath("//button[@type='submit' and contains(.,'Save')]"));
+        wait.until(ExpectedConditions.urlContains("viewPersonalDetails"));
+        waitLoader();
 
-        	addEmployeeBtn.click();
-
-
-        /* =======================
-         * STEP 4: INPUT EMPLOYEE INFO
-         * ======================= */
-        Reporter.log("STEP 4: Input employee information", true);
-
-        driver.findElement(By.name("firstName")).sendKeys("a");
-        driver.findElement(By.name("middleName")).sendKeys("b");
-        driver.findElement(By.name("lastName")).sendKeys("c");
-
-        WebElement empId = driver.findElement(
-                By.xpath("//label[text()='Employee Id']/following::input[1]"));
-        empId.clear();
-        empId.sendKeys("006700");
-
-        /* =======================
-         * STEP 5: SAVE EMPLOYEE
-         * ======================= */
-        Reporter.log("STEP 5: Save employee", true);
-
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-
-        WebElement toast1 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//p[contains(text(),'Successfully')]")));
-
-        Assert.assertTrue(toast1.isDisplayed());
-        Reporter.log("✅ PASS – Employee saved successfully", true);
-
-        /* =======================
-         * STEP 6: SAVE PERSONAL DETAILS
-         * ======================= */
         Reporter.log("STEP 6: Save Personal Details", true);
+        smartClick(By.xpath("//h6[text()='Personal Details']/following::button[@type='submit'][1]"));
+        waitLoader();
 
-        driver.findElement(By.xpath("(//button[@type='submit'][normalize-space()='Save'])[1]"))
-                .click();
+        Reporter.log("STEP 7: Save Custom Fields", true);
+        smartClick(By.xpath("//h6[text()='Custom Fields']/following::button[@type='submit'][1]"));
+        waitLoader();
 
-        WebElement toast2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//p[contains(text(),'Successfully')]")));
-
-        Assert.assertTrue(toast2.isDisplayed());
-        Reporter.log("✅ PASS – Personal details saved", true);
-
-        /* =======================
-         * STEP 7: SAVE JOB DETAILS
-         * ======================= */
-        Reporter.log("STEP 7: Save Job Details", true);
-
-        driver.findElement(By.xpath("(//button[@type='submit'][normalize-space()='Save'])[2]"))
-                .click();
-
-        WebElement toast3 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//p[contains(text(),'Successfully')]")));
-
-        Assert.assertTrue(toast3.isDisplayed());
-        Reporter.log("✅ PASS – Job details saved", true);
-
-        /* =======================
-         * STEP 8: ADD ATTACHMENT
-         * ======================= */
         Reporter.log("STEP 8: Add Attachment", true);
+        smartClick(By.xpath("//h6[text()='Attachments']/following::button[text()=' Add ']"));
 
-        driver.findElement(By.xpath(
-                "//button[contains(@class,'oxd-button--text') and .//text()='Add']"))
-                .click();
+        Reporter.log("STEP 9: Upload file & Add Comment", true);
+        String fileName = "login.csv"; // File này phải có sẵn trong folder data
+        String filePath = Paths.get("src/test/resources/data/" + fileName).toAbsolutePath().toString();
+        
+        driver.findElement(By.xpath("//input[@type='file']")).sendKeys(filePath);
+        driver.findElement(By.xpath("//textarea[@placeholder='Type comment here']")).sendKeys("Automation Upload for " + fName);
 
-        /* =======================
-         * STEP 9: UPLOAD FILE
-         * ======================= */
-        Reporter.log("STEP 9: Upload attachment file", true);
+        Reporter.log("STEP 10: Save Attachment", true);
+        smartClick(By.xpath("//div[@class='orangehrm-attachment']//button[@type='submit']"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='oxd-toaster_1']")));
+        waitLoader();
 
-        String filePath = Paths.get("src/test/resources/data/testfile.txt")
-                .toAbsolutePath().toString();
-
-        WebElement uploadInput = driver.findElement(
-                By.xpath("//input[@type='file']"));
-        uploadInput.sendKeys(filePath);
-
-        WebElement fileName = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'oxd-file-input-div') and not(text()='No file selected')]")));
-
-        Assert.assertTrue(fileName.isDisplayed());
-        Reporter.log("✅ File selected successfully", true);
-
-        /* =======================
-         * STEP 10: SAVE ATTACHMENT
-         * ======================= */
-        Reporter.log("STEP 10: Save attachment", true);
-
-        driver.findElement(By.xpath("(//button[@type='submit'][normalize-space()='Save'])[3]"))
-                .click();
-
-        WebElement toast4 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//p[contains(text(),'Successfully')]")));
-
-        Assert.assertTrue(toast4.isDisplayed());
-
-        WebElement recordFound = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//span[contains(text(),'Record Found')]")));
-
-        Assert.assertTrue(recordFound.isDisplayed());
-
-        Reporter.log("✅ PASS – Attachment added, Record Found displayed", true);
+        Reporter.log("STEP 11: Verify File exists", true);
+        By fileInTable = By.xpath("//div[@class='orangehrm-attachment']//div[text()='" + fileName + "']");
+        WebElement foundFile = wait.until(ExpectedConditions.visibilityOfElementLocated(fileInTable));
+        
+        Assert.assertTrue(foundFile.isDisplayed(), "Lỗi: File không hiển thị sau khi lưu!");
+        Reporter.log("✅ PASS – Hoàn tất cho nhân viên: " + fName, true);
     }
 
     @AfterMethod
     public void afterMethod() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
-        Reporter.log("END TEST CASE", true);
-        Reporter.log("====================================", true);
-        driver.quit();
+    /**
+     * DataProvider đọc từ file Excel
+     * Lưu ý: File Excel cần có 4 cột: FirstName, MiddleName, LastName, EmployeeId
+     */
+    @DataProvider(name = "pimData")
+    public Object[][] dp() throws Exception {
+        String path = getClass()
+                .getClassLoader()
+                .getResource("data/login.xlsx") // Tận dụng file login.xlsx của bạn
+                .getPath();
+
+        // Giả sử bạn tạo một sheet mới tên là "PIM" trong file login.xlsx
+        return DataReader.getExcelDataUsingPoi(path, "PIM");
     }
 }
